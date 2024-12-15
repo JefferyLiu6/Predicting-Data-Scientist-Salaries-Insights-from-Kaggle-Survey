@@ -5,7 +5,7 @@ This project tackles the real-world challenge of **predicting annual compensatio
 
 More information on the 2022 Kaggle Machine Learning & Data Science Survey can be found at:
 
-https://www.kaggle.com/c/kaggle-survey-2022 Links to an external site.
+https://www.kaggle.com/c/kaggle-survey-2022
 ---
 
 ## Problem Statement 🧩
