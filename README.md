@@ -60,15 +60,6 @@ This project implements a systematic, data-driven approach:
 
 ---
 
-## Repository Structure 📂
-```plaintext
-├── clean_kaggle_data_2022.csv     # Cleaned dataset used for the assignment
-├── LIU_1011620523_assignment2.ipynb  # Jupyter Notebook with detailed implementation
-├── LIU_1011620523_assignment2.pdf    # PDF Report with findings and visualizations
-├── README.md                    # This file: Detailed project overview
-
----
-
 ## Key Features ✨
 
 - **Feature Engineering**: Explored new ways to extract and encode information, such as country rank and job importance scores, to improve interpretability and prediction accuracy.
@@ -86,4 +77,13 @@ This project implements a systematic, data-driven approach:
 ---
 
 Feel free to **clone**, **explore**, and **experiment** with the project! Contributions are welcome to take this analysis further. 🚀✨
+---
+
+## Repository Structure 📂
+```plaintext
+├── clean_kaggle_data_2022.csv     # Cleaned dataset used for the assignment
+├── salary_prediction.ipynb  # Jupyter Notebook with detailed implementation
+├── README.md                    # This file: Detailed project overview
+
+
 
