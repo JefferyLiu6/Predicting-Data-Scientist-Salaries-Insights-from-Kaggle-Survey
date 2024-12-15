@@ -1,63 +1,89 @@
-# Predicting Data Scientist Salaries: An Ordinal Classification Approach
+# Salary Prediction Using Ordinal Logistic Regression 📊💼
 
-## Problem Statement
-Understanding what drives salary variations in the data science field is a pressing challenge for job seekers, educators, and employers alike. With diverse factors such as geography, experience, and education contributing to compensation, there is a need for a systematic analysis of survey data to uncover patterns and predict salary buckets effectively.
-
-## Project Overview
-This project utilizes the Kaggle 2022 Machine Learning & Data Science Survey dataset to explore and address the following question:
-
-**How can survey data from the global data science community be leveraged to predict a respondent's yearly compensation bucket accurately?**
-
-To answer this, I implemented a pipeline for data preprocessing, feature engineering, and model development. The project focuses on using ordinal logistic regression for multi-class classification, supported by exploratory data analysis, feature selection, and hyperparameter tuning.
+## Overview 🌟
+This project tackles the real-world challenge of **predicting annual compensation buckets** for data science professionals using survey data from the **2022 Kaggle Machine Learning & Data Science Survey**. With a focus on **ordinal classification**, the study delves into feature engineering, model tuning, and performance evaluation to uncover key factors influencing salaries in the tech industry.
 
 ---
 
-## Key Highlights
+## Problem Statement 🧩
+Understanding salary dynamics is crucial for aspiring and current data scientists to navigate their career paths effectively. While traditional regression models predict absolute values, they fail to account for the ordinal nature of salary brackets. This project addresses:
 
-### 1. Data Cleaning and Preprocessing
-- Handled missing data using appropriate imputation strategies to preserve dataset integrity.
-- Encoded categorical variables (e.g., countries, job titles) using label encoding and ordinal mapping to maintain logical order.
-- Standardized numerical features to improve model performance and ensured compatibility with logistic regression.
-
-### 2. Exploratory Data Analysis and Feature Engineering
-- Conducted feature importance analysis to identify key predictors of salary, such as geography, experience, and education.
-- Created new features (e.g., salary rank by country and job title) to capture nuanced relationships.
-- Reduced dimensionality using feature selection techniques to improve model interpretability.
-
-### 3. Model Development and Evaluation
-- Implemented ordinal logistic regression with a focus on balancing bias and variance through hyperparameter tuning.
-- Performed 10-fold cross-validation to evaluate model consistency and robustness.
-- Selected the best-performing model using mean absolute error (MAE) as a metric, emphasizing the importance of reducing severe misclassifications in ordinal classification.
-
-### 4. Visualization and Insights
-- Visualized feature importance and data distributions to communicate findings effectively.
-- Analyzed model predictions against true salary buckets to identify underfitting and imbalanced data issues.
+1. **How can ordinal logistic regression predict salary buckets effectively?**
+2. **What survey features significantly influence annual compensation?**
+3. **How do hyperparameters and feature selection enhance the predictive performance of the model?**
 
 ---
 
-## Results and Takeaways
+## Approach 🚀
+This project implements a systematic, data-driven approach:
 
-- **Accuracy**: The tuned ordinal logistic regression model achieved an average accuracy of ~40% on the test set, significantly better than random guessing (1/15 for 15 classes).
-- **Key Predictors**: Features like `Country_Salary_Rank` and `Years of Coding Experience` emerged as top predictors, highlighting the influence of geography and professional experience on salary.
-- **Model Limitations**: The model underperformed in higher salary categories due to data imbalance, pointing to the need for more comprehensive datasets and advanced techniques.
+1. **Data Cleaning & Preprocessing**:
+   - Dropped irrelevant features and handled missing values logically.
+   - Transformed categorical features into meaningful numeric encodings.
+   - Enhanced interpretability with feature engineering, e.g., `Country_Salary_Rank`.
+
+2. **Exploratory Data Analysis (EDA)**:
+   - Ranked and visualized features using `SelectKBest` and mutual information regression.
+   - Generated new insights, such as grouping job titles and countries by tech salary indices.
+
+3. **Model Development**:
+   - Implemented **Ordinal Logistic Regression** for multi-class classification.
+   - Applied **10-fold cross-validation** to evaluate model stability and accuracy.
+
+4. **Hyperparameter Tuning**:
+   - Optimized regularization (`C`) and penalty types (`L1` vs. `L2`) for bias-variance trade-offs.
+   - Evaluated models using **Mean Absolute Error (MAE)** for better misclassification interpretation.
+
+5. **Insights & Testing**:
+   - Analyzed prediction distribution trends to detect underfitting and imbalanced data challenges.
+   - Highlighted key drivers like **Years of Experience** and **Country Salary Rank**.
 
 ---
 
-## Tools and Technologies
-- **Libraries**: NumPy, Pandas, Scikit-learn, Matplotlib, Seaborn
-- **Platform**: Google Colab
+## Results 🎯
+- **Training Accuracy**: 40.2%
+- **Testing Accuracy**: 41.4%
+- **Key Insights**:
+  - Salary disparities are heavily influenced by geographical location and professional experience.
+  - Despite reasonable accuracy, the model showed limitations in capturing high salary ranges due to dataset imbalance and model simplicity.
 
 ---
 
-## Repository Contents
-- **Notebook**: `lastname_studentnumber_assignment2.ipynb` – Contains the full implementation, including data preprocessing, feature engineering, and model development.
-- **Report**: `lastname_studentnumber_assignment2.pdf` – A concise report summarizing methodology, results, and insights.
-- **Dataset**: `clean_kaggle_data_2022.csv` – The processed dataset used for this assignment.
+## Technologies Used 🛠️
+- **Python 3.x**: Core programming language.
+- **Libraries**: 
+  - `sklearn` for feature selection, modeling, and evaluation.
+  - `pandas` & `numpy` for data handling and preprocessing.
+  - `matplotlib` & `seaborn` for visualizations.
+- **Jupyter Notebook**: Interactive development environment.
+- **Google Colab**: Cloud-based execution platform.
 
 ---
 
-## Applications
-This project provides a framework for:
-- Building predictive models for ordinal classification tasks in various domains.
-- Identifying key factors influencing outcomes in multi-dimensional survey data.
-- Developing transparent and interpretable machine learning pipelines for real-world applications.
+## Repository Structure 📂
+```plaintext
+├── clean_kaggle_data_2022.csv     # Cleaned dataset used for the assignment
+├── LIU_1011620523_assignment2.ipynb  # Jupyter Notebook with detailed implementation
+├── LIU_1011620523_assignment2.pdf    # PDF Report with findings and visualizations
+├── README.md                    # This file: Detailed project overview
+
+---
+
+## Key Features ✨
+
+- **Feature Engineering**: Explored new ways to extract and encode information, such as country rank and job importance scores, to improve interpretability and prediction accuracy.
+- **Ordinal Regression Focus**: Implemented ordinal logistic regression to effectively account for the natural order of salary buckets, enhancing the model's relevance for the task.
+- **Bias-Variance Trade-off**: Conducted a detailed analysis of hyperparameters like regularization strength (`C`) to balance bias and variance, optimizing model performance.
+
+---
+
+## Next Steps 🧭
+
+- **Address Dataset Imbalance**: Incorporate advanced sampling techniques to mitigate the impact of imbalanced salary buckets on model training.
+- **Experiment with Complex Models**: Explore advanced algorithms such as Gradient Boosting Machines (e.g., XGBoost) for better predictive performance.
+- **Explore Other Ordinal Algorithms**: Investigate additional methods tailored to ordinal data for improved prediction in higher salary brackets.
+
+---
+
+Feel free to **clone**, **explore**, and **experiment** with the project! Contributions are welcome to take this analysis further. 🚀✨
+
