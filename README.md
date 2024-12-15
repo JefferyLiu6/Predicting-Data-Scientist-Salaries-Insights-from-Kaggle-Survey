@@ -3,6 +3,9 @@
 ## Overview 🌟
 This project tackles the real-world challenge of **predicting annual compensation buckets** for data science professionals using survey data from the **2022 Kaggle Machine Learning & Data Science Survey**. With a focus on **ordinal classification**, the study delves into feature engineering, model tuning, and performance evaluation to uncover key factors influencing salaries in the tech industry.
 
+More information on the 2022 Kaggle Machine Learning & Data Science Survey can be found at:
+
+https://www.kaggle.com/c/kaggle-survey-2022 Links to an external site.
 ---
 
 ## Problem Statement 🧩
